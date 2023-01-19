@@ -2,6 +2,7 @@ import { StyleSheet, Text, View , Dimensions , Button , Alert} from 'react-nativ
 import  SelectDropdown  from 'react-native-select-dropdown'
 import React from 'react';
 
+
 const screenwidth = Dimensions.get('window').width;
 const outcounts = ["0아웃", "1아웃", "2아웃"]
 const hits = ["좌안","좌플", "좌월", "좌선", "우안","우플", "우월", "우선", "중안","중플", "중월"]
@@ -23,7 +24,7 @@ export default function App() {
         rowTextForSelection = {(Item) =>{
           return Item
         }}
-        onChangeSearchInputText={()=>{}}
+        onChangeSearchInputText={()=>{console.log("log")}}
         defaultButtonText = {'선택'}
         buttonStyle = {styles.buttonStyle}
         buttonTextStyle = {styles.text}
@@ -42,7 +43,7 @@ export default function App() {
         rowTextForSelection = {(Item) =>{
           return Item
         }}
-        onChangeSearchInputText={()=>{}}
+        onChangeSearchInputText={()=>{console.log("log")}}
         defaultButtonText = {'선택'}
         />        
       </View>
