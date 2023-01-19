@@ -22,6 +22,9 @@ jobs:
   eslint:
     name: Run eslint scanning
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "app"
     permissions:
       contents: read
       security-events: write
@@ -32,6 +35,7 @@ jobs:
 
       - name: Install ESLint
         run: |
+          npm config set legacy-peer-deps true
           npm install eslint@8.10.0
           npm install @microsoft/eslint-formatter-sarif@2.1.7
 
