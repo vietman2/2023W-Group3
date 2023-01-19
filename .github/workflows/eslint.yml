@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "."
+        working-directory: "app"
     permissions:
       contents: read
       security-events: write
@@ -41,7 +41,7 @@ jobs:
 
       - name: Run ESLint
         run: npx eslint app
-          --config .eslintrc.js
+          --config ../.eslintrc.js
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
