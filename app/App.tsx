@@ -14,13 +14,13 @@ export default function App() {
         <Text style = {styles.text}>아웃카운트 : </Text>
         <SelectDropdown
         data = {outcounts}
-        onSelect = {(selectedItem, index) => {
+        onSelect = {(selectedItem) => {
           console.log(selectedItem);
         }}
-        buttonTextAfterSelection = {(selectedItem, index) =>{
+        buttonTextAfterSelection = {(selectedItem) =>{
           return selectedItem
         }}
-        rowTextForSelection = {(Item, index) =>{
+        rowTextForSelection = {(Item) =>{
           return Item
         }}
         onChangeSearchInputText={()=>{}}
@@ -33,13 +33,13 @@ export default function App() {
         <Text style = {styles.text}>타구 : </Text>
         <SelectDropdown
         data = {hits}
-        onSelect = {(selectedItem, index) => {
+        onSelect = {(selectedItem) => {
           console.log(selectedItem);
         }}
-        buttonTextAfterSelection = {(selectedItem, index) =>{
+        buttonTextAfterSelection = {(selectedItem) =>{
           return selectedItem
         }}
-        rowTextForSelection = {(Item, index) =>{
+        rowTextForSelection = {(Item) =>{
           return Item
         }}
         onChangeSearchInputText={()=>{}}
@@ -50,16 +50,16 @@ export default function App() {
         <Text style = {styles.text}>주자 : </Text>
         <SelectDropdown
         data = {runners}
-        onSelect = {(selectedItem, index) => {
+        onSelect = {(selectedItem) => {
           console.log(selectedItem);
         }}
-        buttonTextAfterSelection = {(selectedItem, index) =>{
+        buttonTextAfterSelection = {(selectedItem) =>{
           return selectedItem
         }}
-        rowTextForSelection = {(Item, index) =>{
+        rowTextForSelection = {(Item) =>{
           return Item
         }}
-        onChangeSearchInputText={()=>{}}
+        onChangeSearchInputText={()=>{console.log("log")}}
         defaultButtonText = {'선택'}
         />
       <Button
